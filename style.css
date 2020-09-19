@@ -1,440 +1,865 @@
+/* färgsättning --------------------- */
+
+:root {
+	--orange: #f17949;
+	--yellow: #fab131;
+	--blue: #c7ddea;
+	--lightgray: #ebebeb;
+	--gray: #a9a19e;
+	--black: #000000;
+	--darkgray: #777574;
+	--white: #ffffff;
+	--bg: #e5e5e5;
+}
+
+/* färgsättning  slut  --------------------- */
+
+/* Globala inställningar och CSS reset  --------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
-  font-family: 'Fira Sans', sans-serif;
+	background-color: var(--bg);
 }
 
-.wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
+a {
+	text-decoration: none;
+	list-style: none;
 }
 
-/* Heading styles start ------------- */
+/* Globala inställningar och CSS reset  --------------------- */
+
+/* Typsnitt inställningar  --------------------- */
 
 h1,
 h2,
-h3,
-h4,
-h5 {
-  font-family: 'Frank Ruhl Libre', serif;
+h3 {
+	font-family: Frank Ruhl Libre;
+	font-style: normal;
+	font-weight: 900;
+	letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 45px;
-  font-weight: 900;
-  margin-bottom: -10px;
+	font-size: 45px;
+	line-height: 100%;
 }
 
 h2 {
-  font-size: 35px;
-  color: #fff;
-  margin-top: -10px;
-  font-weight: 900;
+	font-size: 32px;
+	line-height: 41px;
 }
 
 h3 {
-  font-size: 45px;
-  color: #fff;
-  font-weight: 900;
-  width: 330px;
-  line-height: 100%;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0em;
 }
 
 h4 {
-  font-size: 3rem;
-  color: #fff;
-  font-weight: 900;
-  text-align: center;
+	font-family: Frank Ruhl Libre;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
 }
 
 h5 {
-  font-size: 45px;
-  font-weight: 900;
-  text-align: center;
-  width: 314px;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 100%;
+	letter-spacing: -0.02em;
 }
 
-/* Heading styles end ------------- */
-
-/* Element selectors ------------- */
-
-span {
-  color: #fff;
+p {
+	font-family: Fira Sans;
+	font-style: normal;
 }
 
-i {
-  font-size: 25px;
-  margin-top: 7px;
-  color: rgba(0, 0, 0, 0.7);
-}
+/* Typsnitt inställningar slut --------------------- */
 
-ul {
-  height: 90px;
-  display: flex;
-  width: 70%;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  align-items: center;
-  list-style: none;
-}
-
-li a {
-  opacity: 0.4;
-  font-size: 16px;
-  font-weight: 600;
-  color: #000;
-  text-decoration: none;
-}
-
-/* Element selectors end ------------- */
-
-.selected {
-  opacity: 1;
-}
-
-/* Landing page grid ------------- */
+/* Knappar och formulär inställningar  --------------------- */
 
 .btn {
-  text-decoration: none;
-  color: #000;
-  background-color: #fff;
-  width: 110px;
-  text-align: center;
-  border-radius: 100px;
-  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
-  font-size: 12px;
-  padding: 17px 20px;
-  font-weight: bold;
-  text-transform: uppercase;
+	background-color: var(--white);
+	color: rgba(0, 0, 0, 0.8);
+	border: none;
+	border-radius: 100px;
+	font-size: 10px;
+	box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+	padding: 14px;
+	width: 131px;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 12px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(4, 150px);
+/* Knappar och formulär inställningar slut --------------------- */
+
+/* Header / insurance  --------------------- */
+
+.insurance__container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	max-width: 375px;
+	margin: auto;
 }
 
-.grid-item1 {
-  grid-column: span 3;
-  grid-row: span 4;
-  background-color: #c7ddea;
-  position: relative;
-  overflow: hidden;
+.insurance {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.item1-content {
-  width: 60%;
-  margin: 40px auto 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
+.insurance__bigbox {
+	position: relative;
+	max-width: 375px;
+	height: 724px;
+	background-color: var(--blue);
 }
 
-.item1-content .btn {
-  margin-top: 40px;
+.insurance__bigbox__headline {
+	position: absolute;
+	top: 71px;
+	left: 17px;
 }
 
-.grid-item1 p {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 500;
+.insurance__bigbox__text {
+	position: absolute;
+	max-width: 343px;
+	top: 186px;
+	left: 17px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.6);
 }
 
-.grid-item1 img {
-  min-width: 300px;
-  height: 286px;
-  right: 10px;
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  z-index: 1;
+.insurance__bigbox__whitetext {
+	color: #fff;
 }
 
-.grid-item2 {
-  grid-column: span 3;
-  grid-row: span 2;
-  background-color: #f17949;
+.insurance__bigbox__image {
+	width: 286px;
+	height: 279px;
+	position: absolute;
+	bottom: 0px;
 }
 
-.item2-content,
-.item3-content {
-  text-align: center;
-  margin-top: 112px;
+.insurance__btn {
+	position: absolute;
+	top: 302px;
+	left: 17px;
+	text-transform: uppercase;
 }
 
-.grid-item2 p {
-  font-size: 12px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.5);
+.insurance_smallbox--1,
+.insurance_smallbox--2 {
+	max-width: 375px;
+	height: 315px;
 }
 
-.grid-item3 {
-  grid-column: span 3;
-  grid-row: span 2;
-  background-color: #fab131;
+.insurance_smallbox--1 {
+	background-color: var(--orange);
 }
 
-/* Landing page grid end ------------- */
-
-/* Main grid start ------------- */
-
-.main-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(8, 180px);
+.insurance_smallbox--2 {
+	background-color: var(--yellow);
 }
 
-.main-upper {
-  grid-column: span 6;
-  grid-row: span 4;
-  background-color: #a9a19e;
+.insurance_smallbox--1 a,
+.insurance_smallbox--2 a {
+	font-family: Frank Ruhl Libre;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 32px;
+	line-height: 41px;
+	letter-spacing: -0.02em;
+	color: var(--white);
 }
 
-.upper-flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
+.insurance_smallbox__text {
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 13px;
+	letter-spacing: -0.02em;
+	height: 17px;
+	color: rgba(0, 0, 0, 0.5);
+	text-align: center;
 }
 
-.main-grid .btn {
-  position: absolute;
-  bottom: 0%;
-  left: 10%;
+@media screen and (min-width: 700px) {
+	.insurance__container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		max-width: 1002px;
+		min-height: 544px;
+	}
+
+	.insurance__bigbox {
+		max-width: initial;
+		min-width: 501px;
+		height: 544px;
+		grid-row: 1/3;
+	}
+
+	.insurance__bigbox__image {
+		height: auto;
+		position: absolute;
+		right: 0px;
+	}
+
+	.insurance__bigbox__headline {
+		position: absolute;
+		left: 105px;
+	}
+
+	.insurance__bigbox__text {
+		top: 172px;
+		left: 105px;
+		margin: 0;
+	}
+
+	.insurance__btn {
+		top: 306px;
+		left: 105px;
+	}
+
+	.insurance_smallbox--1,
+	.insurance_smallbox--2 {
+		max-width: initial;
+		height: initial;
+	}
+}
+/* Header / insurance slut  --------------------- */
+
+/* Huvudmeny ---------------------*/
+
+.mainmenu,
+.mainmenu__links,
+li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.upper-flex p {
-  width: 280px;
-  font-weight: 500;
-  padding-top: 120px;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(0, 0, 0, 0.6);
+.mainmenu__links {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+	padding-left: 40px;
 }
 
-.main-lower {
-  grid-column: span 6;
-  grid-row: span 4;
-  background-color: #fab131;
+.mainmenu__links li {
+	width: 167px;
+	height: 57px;
 }
 
-/* Main card styles ------------- */
+.mainmenu__links a {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: -0.02em;
+	color: #000000;
+	opacity: 0.4;
+}
 
-.cards {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: -140px;
+a.active {
+	color: #000000;
+	opacity: initial;
+}
+
+@media screen and (min-width: 700px) {
+	.mainmenu__links {
+		position: initial !important;
+		top: initial !important;
+		left: initial !important;
+	}
+}
+
+/* Huvudmeny slut ------------- */
+
+/* Maincontent ------------ */
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+.main__top {
+	justify-content: center;
+	position: relative;
+	margin: 0 auto;
+	width: 375px;
+	height: 1580px;
+	background-color: var(--gray);
+}
+
+.top__content__wrapper {
+	flex-direction: column;
+	margin: 37px 17px 0px 40px;
+}
+
+.main__top__headline {
+	width: 314px;
+	height: 140px;
+	color: var(--white);
+}
+
+.main__top__text {
+	width: 280px;
+	height: 237px;
+	left: 812px;
+	top: 715px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	margin-top: 20px;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.main_btn {
+	display: none;
+}
+
+.main__bottom {
+	width: 375px;
+	height: 550px;
+	background-color: var(--yellow);
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.main__bottom__headline {
+	margin: 30px 0;
+	font-weight: 900;
+	font-size: 45px;
+	line-height: 100%;
+	letter-spacing: -0.02em;
+	color: var(--white);
+	text-align: center;
+}
+
+.main__bottom__text {
+	width: 278px;
+	height: 280px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 0.6);
+	text-align: center;
+}
+
+.card__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 60px;
+	margin-top: 80px;
 }
 
 .card {
-  height: 308px;
-  width: 256px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+	width: 256px;
+	height: 308px;
+	background: #ffffff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	justify-self: center;
 }
 
-.card p {
-  text-align: center;
+.card__canvas {
+	display: block;
+	position: relative;
+	width: 236px;
+	height: 150px;
+	border-radius: 4px;
+	left: 10px;
+	bottom: 26px;
+	overflow: hidden;
 }
 
-.card-text {
-  font-size: 12px;
-  width: 90%;
-  margin: 0 auto;
-  line-height: 18px;
-  color: rgba(0, 0, 0, 0.507);
-}
-.card > div {
-  display: flex;
-  justify-content: center;
+.card__picture {
+	position: absolute;
+	height: auto;
 }
 
-.child-img {
-  background-color: #c7ddea;
-  width: 236px;
-  height: 150px;
-  margin: -40px auto 0 auto;
-  border-radius: 4px;
+.card__headline {
+	text-align: center;
+	color: rgba(0, 0, 0, 0.9);
 }
 
-.adult-img {
-  background-color: #fab131;
-  width: 236px;
-  height: 150px;
-  margin: -40px auto 0 auto;
-  border-radius: 4px;
+.card__text {
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 18px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.4);
+	margin: 14px 21px 0px 21px;
 }
 
-.old-img {
-  background-color: #f17949;
-  width: 236px;
-  height: 150px;
-  margin: -40px auto 0 auto;
-  border-radius: 4px;
+.card_canvas--blue {
+	background-color: var(--blue);
 }
 
-.main-lower img {
-  height: 130px;
-  padding-top: 20px;
+.card__picture--blue {
+	margin-top: 12px;
+	left: 30%;
+	width: 40%;
 }
 
-/* Card styles end ------------- */
-
-.about-text {
-  font-size: 14px;
-  width: 70%;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 20px;
-  color: rgba(0, 0, 0, 0.6);
+.card_canvas--yellow {
+	background-color: var(--yellow);
 }
 
-.main-grid2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 340px);
+.card__picture--yellow {
+	margin-top: 14px;
+	left: 30%;
+	width: 40%;
 }
 
-.box {
-  grid-row: span 1;
-  grid-column: span 1;
+.card_canvas--orange {
+	background-color: var(--orange);
 }
 
-.box p {
-  width: 257px;
-  font-size: 17px;
-  text-align: center;
-  margin: 75px auto;
-  color: rgba(0, 0, 0, 0.7);
+.card__picture--orange {
+	margin-top: 24px;
+	left: 30%;
+	width: 50%;
 }
 
-.number {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-size: 35px;
-  color: rgba(0, 0, 0, 0.4);
-  font-weight: 900;
-  padding-left: 25px;
-  padding-top: 20px;
+@media screen and (min-width: 700px) {
+	.main__top {
+		width: 1002px;
+		height: 612px;
+		display: initial;
+		justify-content: initial;
+		margin: 0 auto;
+	}
+
+	.top__content__wrapper {
+		margin: 103px 0px 0px 0px;
+		flex-direction: initial;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.main__top__text {
+		margin-top: 0px;
+	}
+
+	.main_btn {
+		position: absolute;
+		left: 130px;
+		top: 301px;
+		display: inline;
+	}
+
+	.bottom__content__wrapper {
+		margin-top: 100px;
+		flex-direction: column;
+		display: flex;
+		justify-content: center;
+		gap: 40px;
+	}
+
+	.main__bottom {
+		width: 1002px;
+		height: 680px;
+		margin: 0 auto;
+	}
+
+	.main__bottom__headline {
+		margin: 0px;
+	}
+
+	.main__bottom__text {
+		width: 442px;
+		height: 280px;
+	}
+
+	.card__grid {
+		grid-template-columns: repeat(3, 1fr);
+		margin: 105px 70px;
+		justify-content: center;
+		gap: 0px;
+	}
 }
 
-.one {
-  background-color: #c7ddea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Stepbystep ------------------*/
+.stepbystep--box1 {
+	background-color: var(--blue);
 }
 
-.three {
-  background-color: #e5e5e5;
+.stepbystep--box2 {
+	background-color: var(--white);
 }
 
-.five {
-  background-color: #f17949;
+.stepbystep--box3 {
+	background-color: var(--lightgray);
 }
 
-/* Main grid end ------------- */
-
-/* Footer section ------------- */
-
-.uparrow {
-  height: 68px;
-  background-color: #a9a19e;
-  text-align: center;
+.stepbystep--box4 {
+	background-color: var(--white);
 }
 
-.uparrow p {
-  font-size: 17px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.7);
-  margin-top: 0px;
+.stepbystep--box5 {
+	background-color: var(--orange);
 }
 
-.map {
-  height: 340px;
-  background-color: #777574;
+.stepbystep--box6 {
+	background-color: var(--white);
 }
 
-/* Footer section end ------------- */
+.stepbystep {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	width: 375px;
+	height: 170px;
+	margin: auto;
+}
 
-/* Media queries ------------- */
+.stepbystep__item--1,
+.stepbystep__item--2 {
+	display: grid;
+	margin: auto;
+}
 
-@media screen and (max-width: 700px) {
-  nav {
-    display: none;
-  }
-  .item1-content {
-    width: 80%;
-  }
-  .item1-content .btn {
-    margin-top: 10px;
-  }
-  .grid-item1 img {
-    width: 340px;
-  }
-  .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 200px);
-  }
+.stepbystep__item--1 {
+	width: 60px;
+	height: 60px;
+	margin: auto;
+}
 
-  .grid-item1 {
-    grid-row: span 4;
-  }
+.stepbystep__item--2 {
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
 
-  .item2-content,
-  .item3-content {
-    margin-top: 150px;
-  }
+.stepbystep__numbering {
+	font-family: Frank Ruhl Libre;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 35px;
+	line-height: 100%;
+	letter-spacing: -0.02em;
+	color: rgba(0, 0, 0, 0.4);
+}
 
-  .main-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(13, 200px);
-  }
+.stepbystep__headline,
+.stepbystep__numbering {
+	display: grid;
+	margin: auto;
+	align-self: center;
+	justify-self: center;
+}
 
-  .upper-flex {
-    flex-direction: column;
-  }
+.stepbystep__headline-small {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+}
 
-  h3 {
-    width: 90%;
-  }
+.stepbystep__headline--big {
+	color: rgba(0, 0, 0, 0.8);
+}
 
-  .upper-flex p {
-    padding-top: 10px;
-    width: 90%;
-  }
+.stepbystep__grid {
+	display: grid;
+	margin: auto;
+	max-width: 1002px;
+}
 
-  .main-grid .btn {
-    display: none;
-  }
+.anchor {
+	display: none;
+}
 
-  .main-upper {
-    grid-row: span 9;
-  }
+.spacer {
+	width: 375px;
+	height: 218px;
+	background-color: var(--darkgray);
+	margin: auto;
+}
 
-  .cards {
-    flex-direction: column;
-    margin-top: -1350px;
-    min-height: 1400px;
-    justify-content: space-evenly;
-  }
+.linebreak {
+	display: none;
+}
 
-  .card {
-    width: 256px;
-    margin: 0 auto;
-  }
+@media screen and (min-width: 700px) {
+	.stepbystep {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		width: 334px;
+		height: 340px;
+	}
 
-  .main-grid2 {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 170px);
-  }
+	.stepbystep__item--1,
+	.stepbystep__item--2 {
+		display: grid;
+	}
 
-  .box p {
-    margin: 15px auto;
-  }
+	.stepbystep__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
 
-  .uparrow {
-    display: none;
-  }
+	.linebreak {
+		display: initial;
+	}
+
+	.anchor {
+		display: initial;
+		width: 1002px;
+		height: 68px;
+		background: var(--gray);
+		grid-row-start: 3;
+		grid-column-start: 1;
+		grid-column-end: 4;
+		display: grid;
+		margin: auto;
+	}
+
+	.spacer {
+		width: 1002px;
+		height: 340px;
+		background-color: var(--darkgray);
+		grid-row-start: 4;
+		grid-column-start: 1;
+		grid-column-end: 4;
+		margin: auto;
+	}
+
+	.anchor__image {
+		margin: auto;
+		padding-top: 10px;
+	}
+
+	.anchor__link {
+		font-family: Fira Sans;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 17px;
+		line-height: 20px;
+		color: rgba(0, 0, 0, 0.7);
+		margin: auto;
+		padding-bottom: 20px;
+	}
+}
+
+.hero {
+	display: grid;
+	position: relative;
+	width: 375px;
+	height: 500px;
+	background-color: var(--blue);
+	margin: auto;
+}
+
+.hero__image {
+	position: absolute;
+	right: 100px;
+	bottom: 0;
+}
+
+.hero__headline {
+	width: 314px;
+	margin: auto;
+	line-height: 100%;
+	padding-bottom: 200px;
+}
+
+.contact__adress {
+	width: 375;
+	height: 400px;
+	background-color: var(--yellow);
+}
+
+.contact {
+	width: 375;
+	height: 700px;
+	background-color: var(--gray);
+	margin: auto;
+	display: grid;
+}
+
+.contact__headline {
+	color: var(--white);
+	width: 314px;
+	margin: auto;
+}
+
+.form__container {
+	width: 375px;
+	display: grid;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.form__headline {
+	color: var(--white);
+	opacity: 0.7;
+	margin: 5px 0px;
+}
+
+input[type='text'] {
+	width: 300px;
+	height: 40px;
+	border-radius: 2px;
+}
+
+input[type='text']:focus {
+	outline: none;
+	border: 1px solid var(--gray);
+}
+
+textarea {
+	padding: 16px;
+	width: 300px;
+	height: 166px;
+	border-radius: 2px;
+}
+
+form textarea[type='text']:focus {
+	outline: none;
+	border: 1px solid var(--gray);
+}
+
+form textarea::placeholder {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 100%;
+	letter-spacing: -0.02em;
+	color: #000000;
+}
+
+.form__btn {
+	float: right;
+}
+
+.location {
+	display: none;
+}
+
+.footer__contact {
+	display: flex;
+	flex-direction: row;
+	width: 375px;
+	height: 218px;
+	background-color: var(--yellow);
+	margin: auto;
+}
+
+@media screen and (min-width: 700px) {
+	.hero {
+		width: 1002px;
+		height: 340px;
+		background-color: var(--blue);
+		margin: auto;
+	}
+
+	.hero__headline {
+		padding-bottom: 0px;
+	}
+
+	.contact {
+		width: 1002px;
+		height: 544px;
+		background-color: var(--gray);
+		margin: auto;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.contact__headline {
+		color: var(--white);
+		width: 314px;
+		height: 140px;
+		margin: auto;
+		margin-top: 115px;
+	}
+
+	.form__container {
+		width: 334px;
+	}
+
+	.form__headline {
+		color: var(--white);
+		opacity: 0.7;
+		margin: 5px 0px;
+	}
+
+	input[type='text'] {
+		width: 334px;
+		height: 40px;
+		border-radius: 2px;
+	}
+
+	textarea {
+		padding: 16px;
+		width: 334px;
+		height: 166px;
+		border-radius: 2px;
+	}
+
+	.location {
+		display: block;
+		margin: auto;
+		height: 407px;
+		width: 1002px;
+		position: relative;
+	}
+
+	.location__image--pin {
+		position: absolute;
+		right: 47.57%;
+		top: 40.91%;
+	}
+
+	.location__info {
+		position: absolute;
+		width: 323px;
+		height: 206px;
+		background-color: var(--yellow);
+		left: 10%;
+		top: 20%;
+	}
+
+	.location__info__headline {
+		color: var(--white);
+		padding: 20px;
+	}
+
+	.location__info__text {
+		color: var(--white);
+		padding-left: 20px;
+	}
+
+	.footer__contact {
+		width: 1002px;
+		height: 340px;
+		background-color: var(--darkgray);
+	}
 }
