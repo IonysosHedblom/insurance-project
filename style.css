@@ -190,6 +190,11 @@ p {
 	color: var(--white);
 }
 
+.insurance_smallbox--1 a:hover,
+.insurance_smallbox--2 a:hover {
+	color: #000000;
+}
+
 .insurance_smallbox__text {
 	font-weight: bold;
 	font-size: 11px;
@@ -235,6 +240,11 @@ li {
 }
 
 a.active {
+	color: #000000;
+	opacity: initial;
+}
+
+.mainmenu a:hover {
 	color: #000000;
 	opacity: initial;
 }
@@ -482,6 +492,8 @@ main {
 .anchor {
 	display: none;
 }
+
+/* Stepbystep slutar------------------*/
 
 .spacer {
 	width: 375px;
